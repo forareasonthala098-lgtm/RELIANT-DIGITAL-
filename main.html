@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Reliant Digital — Prayagraj</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",Arial;margin:0;padding:0;color:#111}
+    header{background:#0b59a7;color:#fff;padding:20px;text-align:center}
+    .container{max-width:900px;margin:20px auto;padding:0 16px}
+    .card{border:1px solid #eee;padding:16px;border-radius:8px;margin-bottom:12px}
+    .actions{display:flex;gap:8px;flex-wrap:wrap}
+    a.button{display:inline-block;padding:8px 12px;border-radius:6px;text-decoration:none;background:#0b59a7;color:#fff}
+    a.button.whatsapp{background:#25D366;color:#fff}  /* WhatsApp Green */
+    footer{font-size:13px;color:#666;text-align:center;margin:30px 0}
+    ul{margin:8px 0 0 18px}
+    .service-flag{color:green;font-weight:700}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Reliant Digital — Prayagraj</h1>
+    <div>Fast Home Service — 2 घंटे के अंदर सर्विस (Prayagraj)</div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>हम क्या बेचते / सेवाएँ</h2>
+      <ul>
+        <li>RO Water Purifier (बड़े ब्रांड्स)</li>
+        <li>Geyser / Water Heater</li>
+        <li>Domestic Atta Chakki</li>
+        <li>सारे Home Appliances — Affordable Rate पर, ब्रांड्स के साथ ✅</li>
+        <li>रख-रखाव और ऑन-साइट रिपेयर</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contact">
+      <h2>संपर्क</h2>
+      <p><strong>Proprietor:</strong> RITURAJ SINGH</p>
+      <p><strong>Mobile:</strong> <a href="tel:+919369296733">9369 296 733</a></p>
+      <p><strong>Email:</strong> <a href="mailto:ks7028255@gmail.com">ks7028255@gmail.com</a></p>
+      <p><strong>Address:</strong> 
+        <a href="https://www.google.com/maps/search/?api=1&query=Lal+Chauk+Near+Sai+Mandir+Jhushi+Prayagraj" target="_blank">
+          Lal Chauk, Near Sai Mandir, Jhushi, Prayagraj
+        </a>
+      </p>
+      <p><strong>Service Time:</strong> <span class="service-flag">2 hours service inside Prayagraj</span></p>
+      <div class="actions">
+        <a class="button" href="tel:+919369296733">📞 Call Now</a>
+        <a class="button" href="mailto:ks7028255@gmail.com">✉️ Email भेजो</a>
+        <a class="button whatsapp" href="https://wa.me/919369296733?text=Hello%20Reliant%20Digital%2C%20I%20want%20service" target="_blank">💬 WhatsApp</a>
+        <a class="button" href="https://www.google.com/maps/search/?api=1&query=Lal+Chauk+Near+Sai+Mandir+Jhushi+Prayagraj" target="_blank">📍 Open in Maps</a>
+        <a class="button" href="#service-feed" onclick="scrollToFeed()">Service अपडेट</a>
+      </div>
+    </section>
+
+    <section class="card" id="service-feed">
+      <h2>Service Feed (Live)</h2>
+      <div id="feed-area">Loading service feed...</div>
+    </section>
+
+    <section class="card">
+      <h2>नोट</h2>
+      <p>साइट को अपडेट करने के लिए GitHub Repo में सीधे index.html या data.json edit करके commit कर दें — बदलाव तुरंत लागू हो जाएंगे (Pages enabled होने पर)।</p>
+    </section>
+  </main>
+
+  <footer>© Reliant Digital — Prayagraj</footer>
+
+  <script>
+    function showData(data){
+      const area = document.getElementById('feed-area');
+      if(!data || data.length===0){
+        area.innerText = 'कोई सर्विस अपडेट उपलब्ध नहीं।';
+        return;
+      }
+      const html = data.map(item => {
+        return `<div style="margin-bottom:10px;padding:8px;border:1px dashed #ddd;border-radius:6px">
+          <strong>${item.title}</strong><br/>
+          ${item.detail ? item.detail + '<br/>' : ''}
+          <small>${item.time || ''} | ${item.location || ''}</small>
+        </div>`;
+      }).join('');
+      area.innerHTML = html;
+    }
+
+    fetch('data.json').then(r=>{
+      if(!r.ok) throw new Error('no feed');
+      return r.json();
+    }).then(json=>{
+      showData(json.feed || []);
+    }).catch(err=>{
+      showData([{
+        title: '2-hour on-site service available in Prayagraj',
+        detail: 'RO, Geyser, Atta Chakki — call/email to schedule',
+        time: '9:00–18:00',
+        location: 'Prayagraj'
+      }]);
+    });
+
+    function scrollToFeed(){ document.getElementById('service-feed').scrollIntoView({behavior:'smooth'}); }
+  </script>
+</body>
+</html>
