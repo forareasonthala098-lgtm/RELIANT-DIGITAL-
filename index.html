@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>INTRIPID RELIANT — Prayagraj</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",Arial;margin:0;padding:0;color:#111;background:#f9f9f9}
+
+    /* Navbar */
+    nav{
+      background:#111;color:#fff;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:10px 20px;position:sticky;top:0;z-index:1000;
+    }
+    nav .logo{font-size:22px;font-weight:700;letter-spacing:1px}
+    nav ul{list-style:none;display:flex;margin:0;padding:0}
+    nav ul li{margin-left:20px}
+    nav ul li a{color:#fff;text-decoration:none;font-size:16px}
+
+    /* Hero */
+    .hero{
+      background:url('ro-banner.jpg') no-repeat center center/cover;
+      color:#fff;text-align:center;padding:70px 15px;position:relative;
+    }
+    .hero::after{content:"";position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);}
+    .hero h1,.hero h2,.hero div{position:relative;z-index:1}
+    .hero h1{font-size:50px;margin:0;font-weight:900;letter-spacing:3px;text-shadow:2px 2px 8px rgba(0,0,0,0.8);}
+    .hero h2{margin:15px 0 5px 0;font-size:26px;font-weight:600;text-shadow:1px 1px 6px rgba(0,0,0,0.7);}
+    .hero div{font-size:18px;margin-top:8px}
+
+    /* Flash Offer */
+    .offer{
+      text-align:center;
+      font-size:26px;
+      font-weight:700;
+      color:#e84118;
+      margin:20px 0;
+      animation:flash 1s infinite alternate;
+    }
+    @keyframes flash{
+      from{opacity:1;}
+      to{opacity:0.2;}
+    }
+
+    /* Slider */
+    .slider{width:100%;overflow:hidden;position:relative;margin-top:10px}
+    .slides{display:flex;width:300%;animation:slide 12s infinite}
+    .slides img{width:100%;height:400px;object-fit:cover}
+    @keyframes slide{
+      0%{margin-left:0}
+      25%{margin-left:0}
+      35%{margin-left:-100%}
+      60%{margin-left:-100%}
+      70%{margin-left:-200%}
+      95%{margin-left:-200%}
+      100%{margin-left:0}
+    }
+
+    /* Products */
+    .products{padding:40px 20px;max-width:1100px;margin:auto}
+    .products h2{text-align:center;font-size:30px;margin-bottom:25px}
+    .card-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .card{
+      background:#fff;border-radius:15px;overflow:hidden;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:transform 0.3s;
+    }
+    .card:hover{transform:translateY(-5px)}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card h3{margin:15px;font-size:20px}
+    .card p{margin:0 15px 15px;font-size:15px;color:#555}
+    .card a{
+      display:block;text-align:center;background:#111;color:#fff;
+      padding:10px;margin:0 15px 15px;border-radius:8px;text-decoration:none
+    }
+
+    /* Exchange Offer */
+    .exchange{
+      background:#ffeaa7;padding:40px 20px;text-align:center;margin-top:40px
+    }
+    .exchange h2{font-size:28px;margin-bottom:10px}
+    .exchange p{font-size:18px;margin-bottom:15px}
+    .exchange a{background:#111;color:#fff;padding:12px 25px;border-radius:8px;text-decoration:none}
+
+    /* Reviews */
+    .reviews{padding:40px 20px;background:#f1f2f6}
+    .reviews h2{text-align:center;font-size:28px;margin-bottom:25px}
+    .review-box{max-width:900px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+    .review{
+      background:#fff;border-radius:12px;padding:20px;box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      font-size:15px;color:#333;line-height:1.5
+    }
+    .review strong{display:block;margin-top:10px;color:#111}
+
+    /* Footer */
+    footer{background:#111;color:#ddd;text-align:center;padding:20px;font-size:14px;margin-top:40px}
+    footer a{color:#25D366;text-decoration:none}
+
+    /* Floating WhatsApp */
+    .whatsapp{
+      position:fixed;bottom:20px;right:20px;
+      background:#25D366;color:#fff;padding:12px 20px;border-radius:50px;
+      font-size:18px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.3)
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">INTRIPID RELIANT</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#exchange">Exchange</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>INTRIPID RELIANT</h1>
+    <h2>Digital — Prayagraj</h2>
+    <div>Fast Home Service — 2 घंटे के अंदर सर्विस (Prayagraj)</div>
+  </div>
+
+  <!-- Flashing Offer -->
+  <div class="offer">🎉 Limited Time Offer — Get 10% OFF on All Products 🎉</div>
+
+  <!-- Auto Slider -->
+  <div class="slider">
+    <div class="slides">
+      <img src="ro-banner.jpg" alt="RO Banner">
+      <img src="geyser-banner.jpg" alt="Geyser Banner">
+      <img src="flourmill-banner.jpg" alt="Flour Mill Banner">
+    </div>
+  </div>
+
+  <!-- Products -->
+  <section class="products" id="products">
+    <h2>हमारे Products</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="ro.jpg" alt="RO Water Purifier">
+        <h3>Reliant RO Water Purifier</h3>
+        <p>Pure & Safe Drinking Water. Installation & Service available.</p>
+        <a href="tel:9369296733">Call Now</a>
+      </div>
+      <div class="card">
+        <img src="geyser.jpg" alt="Geyser">
+        <h3>Reliant Geyser</h3>
+        <p>Instant Hot Water Solutions with best energy saving tech.</p>
+        <a href="tel:9369296733">Call Now</a>
+      </div>
+      <div class="card">
+        <img src="flour-mill.jpg" alt="Flour Mill">
+        <h3>Reliant Flour Mill</h3>
+        <p>Domestic Atta Chakki for healthy & fresh flour at home.</p>
+        <a href="tel:9369296733">Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Exchange Offer -->
+  <section class="exchange" id="exchange">
+    <h2>🔥 एक्सचेंज ऑफर 🔥</h2>
+    <p>पुराना RO, Geyser या Flour Mill लाएँ और नया Reliant Product भारी डिस्काउंट पर पाएँ!</p>
+    <a href="tel:9369296733">अभी Call करें</a>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="reviews">
+    <h2>Customer Reviews</h2>
+    <div class="review-box">
+      <div class="review">
+        "बहुत ही तेज़ और भरोसेमंद सर्विस। 2 घंटे में technician घर पहुँच गया।"  
+        <strong>- Ankit, Prayagraj</strong>
+      </div>
+      <div class="review">
+        "Reliant RO का पानी बहुत अच्छा है, installation भी बहुत जल्दी कर दिया।"  
+        <strong>- Priya, Jhushi</strong>
+      </div>
+      <div class="review">
+        "Geyser लिया Reliant का — सर्दियों में बहुत काम आया, highly recommended!"  
+        <strong>- Ramesh, Naini</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>📍 Lal Chauk, Near Sai Mandir, Jhushi, Prayagraj</p>
+    <p>📞 Contact: <a href="tel:9369296733">9369 296 733</a></p>
+    <p>💬 WhatsApp: <a href="https://wa.me/919369296733">Chat Now</a></p>
+    <p>© 2025 INTRIPID RELIANT — All Rights Reserved</p>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/919369296733" class="whatsapp">WhatsApp</a>
+
+</body>
+  </html>
