@@ -140,7 +140,97 @@
       <p>Ultra HD Smart Display</p>
       <a href="tel:9369296733" class="btn">Call Now</a>
     </div>
-  </section>
+  </section><!-- Reviews & Rating Badge (Prayagraj only) -->
+<section id="local-reviews" style="max-width:1100px;margin:30px auto;padding:20px;">
+  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:18px;background:#fff;padding:18px;border-radius:12px;
+              box-shadow:0 6px 18px rgba(0,0,0,0.08);">
+    <!-- Left: Big Badge -->
+    <div style="flex:0 0 220px;text-align:center;padding:10px;">
+      <div style="background:linear-gradient(135deg,#ffd54a,#ffb300);border-radius:12px;padding:18px 12px;color:#111;">
+        <div style="font-size:40px;font-weight:800;line-height:1;">4.8<span style="font-size:18px;font-weight:700;">★</span></div>
+        <div style="font-size:14px;margin-top:6px;color:#333;font-weight:700;">Average Rating</div>
+        <div style="font-size:13px;color:#222;margin-top:6px;">Based in <strong>Prayagraj</strong></div>
+      </div>
+    </div>
+
+    <!-- Right: Details -->
+    <div style="flex:1;min-width:240px;">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <!-- Stars (visual) -->
+        <div aria-hidden="true" style="font-size:22px;color:#ffb400;">
+          ★ ★ ★ ★ ☆
+        </div>
+        <div style="font-size:18px;font-weight:700;color:#111;">4.8 out of 5</div>
+        <div style="font-size:15px;color:#555;">(700 reviews)</div>
+      </div>
+
+      <!-- Rating bar breakdown (optional) -->
+      <div style="margin-top:12px;display:grid;grid-template-columns:1fr 120px;gap:8px;align-items:center;">
+        <div style="font-size:13px;color:#444;">Location</div>
+        <div style="font-size:13px;color:#222;font-weight:700;">Prayagraj only</div>
+
+        <div style="font-size:13px;color:#444;">Verified Reviews</div>
+        <div style="font-size:13px;color:#222;font-weight:700;">700</div>
+
+        <div style="font-size:13px;color:#444;">Average Rating</div>
+        <div style="font-size:13px;color:#222;font-weight:700;">4.8 / 5</div>
+      </div>
+
+      <!-- CTA -->
+      <div style="margin-top:14px;">
+        <a href="https://wa.me/919369296733" style="display:inline-block;background:#25D366;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;">
+          Read Reviews / Contact
+        </a>
+        <a href="#write-review" style="display:inline-block;margin-left:10px;background:#111;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;">
+          Write a Review
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Optional: Small sample reviews (show a few, you can rotate/populate server-side) -->
+<section style="max-width:1100px;margin:10px auto 40px;padding:0 20px;">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+    <blockquote style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+      <p style="margin:0 0 8px;font-size:14px;color:#333;">"बहुत ही तेज़ सर्विस — technician 2 घंटे में आ गया और RO ठीक कर दिया."</p>
+      <footer style="font-size:13px;color:#666;">— Ankit, Prayagraj</footer>
+    </blockquote>
+    <blockquote style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+      <p style="margin:0 0 8px;font-size:14px;color:#333;">"Geyser installation बढ़िया हुआ, friendly staff."</p>
+      <footer style="font-size:13px;color:#666;">— Priya, Jhushi (Prayagraj)</footer>
+    </blockquote>
+    <blockquote style="background:#fff;padding:14px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.06);">
+      <p style="margin:0 0 8px;font-size:14px;color:#333;">"Exchange offer लिया — अच्छी deal और समय पर delivery."</p>
+      <footer style="font-size:13px;color:#666;">— Ramesh, Naini (Prayagraj)</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- JSON-LD structured data for AggregateRating (helps SEO) -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LocalBusiness",
+  "name":"INTRIPID RELIANT",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Prayagraj",
+    "streetAddress": "Lal Chauk, Near Sai Mandir, Jhushi"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "700",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Prayagraj"
+  }
+}
+</script>
 <!-- Customer Reviews Section -->
   <section id="reviews" style="background:#fff;padding:40px 20px;margin:20px 0;">
     <h2 style="text-align:center;font-size:28px;color:#003366;margin-bottom:25px;">
